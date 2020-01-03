@@ -1,6 +1,6 @@
 require 'sinatra'
 
-class App < Sinatra::Base
+class FormationBinner < Sinatra::Base
 
   get '/' do
     erb(:index)

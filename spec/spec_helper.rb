@@ -1,4 +1,3 @@
-require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 
@@ -9,6 +8,14 @@ SimpleCov.formatter = SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter
   ]
 )
 SimpleCov.start
+
+require 'capybara/rspec'
+require 'capybara'
+require 'rspec'
+
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
+Capybara.app = FormationBinner
 
 RSpec.configure do |config|
 
