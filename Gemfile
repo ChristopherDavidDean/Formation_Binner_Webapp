@@ -4,10 +4,14 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem "capybara"
 gem "rack"
-gem "rspec"
 gem "rubocop", require: false
-gem 'simplecov'
-gem 'simplecov-console'
 gem "sinatra"
+gem 'sinatra-partial', require: 'sinatra/partial'
+
+group :test do
+  gem "capybara"
+  gem "rspec"
+  gem 'simplecov'
+  gem 'simplecov-console'
+end

@@ -70,6 +70,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
+    sinatra-partial (1.0.1)
+      sinatra (>= 1.4)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     tilt (2.0.10)
@@ -88,6 +90,7 @@ DEPENDENCIES
   simplecov
   simplecov-console
   sinatra
+  sinatra-partial
 
 BUNDLED WITH
    1.17.3
