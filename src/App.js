@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      binningMethod: false,
+      binningMethod: "StageBins",
     }
   }
 
@@ -19,18 +19,21 @@ class App extends React.Component {
     this.setState({
       binningMethod: "StageBins"
     })
+    console.log(this.state.binningMethod)
   }
 
   scoreGrid1Click = () => {
     this.setState({
       binningMethod: "ScoreGrid1"
     })
+    console.log(this.state.binningMethod)
   }
 
   scoreGrid2Click = () => {
     this.setState({
       binningMethod: "ScoreGrid2"
     })
+    console.log(this.state.binningMethod)
   }
 
   render() {
