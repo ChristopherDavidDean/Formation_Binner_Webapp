@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import PbdbAges from './components/pbdb_ages.jsx';
 import './App.css';
 
 class App extends React.Component {
@@ -57,6 +58,9 @@ class App extends React.Component {
             </ButtonGroup>
           </ButtonToolbar>
         </div>
+
+        <PbdbAges/>
+
       </div>
     );
   }
