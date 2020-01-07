@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import PbdbAges from './components/pbdb_ages.jsx';
+import ScoreGrid1 from './components/score_grid1.jsx';
+import ScoreGrid2 from './components/score_grid2.jsx';
 import './App.css';
 
 class App extends React.Component {
@@ -60,6 +62,8 @@ class App extends React.Component {
         </div>
 
         <PbdbAges/>
+        <ScoreGrid1/>
+        <ScoreGrid2/>
 
       </div>
     );
