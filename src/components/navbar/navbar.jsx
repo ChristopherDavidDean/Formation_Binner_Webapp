@@ -8,7 +8,12 @@ class NavbarMain extends React.Component {
     return (
       <Navbar className="nav-bar" bg="dark" variant="dark">
         <Navbar.Brand href="/">
-
+        <img alt="logo"
+        src= "uob_logo.jpeg"
+        width="80"
+        height="80"
+        >
+        </img>
         </Navbar.Brand>
         <Navbar.Text className='Nav-title'>
           Formation Binner
