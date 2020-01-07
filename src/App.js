@@ -19,57 +19,111 @@ class App extends React.Component {
     this.setState({
       binningMethod: "StageBins"
     })
-    console.log(this.state.binningMethod)
   }
 
   scoreGrid1Click = () => {
     this.setState({
       binningMethod: "ScoreGrid1"
     })
-    console.log(this.state.binningMethod)
   }
 
   scoreGrid2Click = () => {
     this.setState({
       binningMethod: "ScoreGrid2"
     })
-    console.log(this.state.binningMethod)
   }
 
   render() {
-    return (
-      <div className="App">
-        <div className="bin-method-wrapper">
-          <div className="bin-header">
-          Binning Methods
+    if(this.state.binningMethod === "StageBins") {
+      return (
+        <div className="App">
+          <div className="bin-method-wrapper">
+            <div className="bin-header">
+            Binning Methods
+            </div>
+            <ButtonToolbar aria-label="Toolbar with button groups">
+              <ButtonGroup className="mr-2" aria-label="First group">
+                <Button
+                id="stagebins"
+                onClick={this.stageBinsClick}>
+                Stage Bins
+                </Button>
+                <Button
+                id="scoregrid1"
+                onClick={this.scoreGrid1Click}>
+                Score Grid 1
+                </Button>
+                <Button
+                id="scoregrid2"
+                onClick={this.scoreGrid2Click}>
+                Score Grid 2
+                </Button>
+              </ButtonGroup>
+            </ButtonToolbar>
           </div>
-          <ButtonToolbar aria-label="Toolbar with button groups">
-            <ButtonGroup className="mr-2" aria-label="First group">
-              <Button
-              id="stagebins"
-              onClick={this.stageBinsClick}>
-              Stage Bins
-              </Button>
-              <Button
-              id="scoregrid1"
-              onClick={this.scoreGrid1Click}>
-              Score Grid 1
-              </Button>
-              <Button
-              id="scoregrid2"
-              onClick={this.scoreGrid2Click}>
-              Score Grid 2
-              </Button>
-            </ButtonGroup>
-          </ButtonToolbar>
+          <PbdbAges/>
         </div>
-
-        <PbdbAges/>
-        <ScoreGrid1/>
-        <ScoreGrid2/>
-
-      </div>
-    );
+      )}
+    else if (this.state.binningMethod === "ScoreGrid1") {
+      return (
+        <div className="App">
+          <div className="bin-method-wrapper">
+            <div className="bin-header">
+            Binning Methods
+            </div>
+            <ButtonToolbar aria-label="Toolbar with button groups">
+              <ButtonGroup className="mr-2" aria-label="First group">
+                <Button
+                id="stagebins"
+                onClick={this.stageBinsClick}>
+                Stage Bins
+                </Button>
+                <Button
+                id="scoregrid1"
+                onClick={this.scoreGrid1Click}>
+                Score Grid 1
+                </Button>
+                <Button
+                id="scoregrid2"
+                onClick={this.scoreGrid2Click}>
+                Score Grid 2
+                </Button>
+              </ButtonGroup>
+            </ButtonToolbar>
+          </div>
+          <ScoreGrid1/>
+        </div>
+      )} else {
+      return (
+        <div className="App">
+          <div className="bin-method-wrapper">
+            <div className="bin-header">
+            Binning Methods
+            </div>
+            <ButtonToolbar aria-label="Toolbar with button groups">
+              <ButtonGroup className="mr-2" aria-label="First group">
+                <Button
+                id="stagebins"
+                onClick={this.stageBinsClick}>
+                Stage Bins
+                </Button>
+                <Button
+                id="scoregrid1"
+                onClick={this.scoreGrid1Click}>
+                Score Grid 1
+                </Button>
+                <Button
+                id="scoregrid2"
+                onClick={this.scoreGrid2Click}>
+                Score Grid 2
+                </Button>
+              </ButtonGroup>
+            </ButtonToolbar>
+          </div>
+          <ScoreGrid2/>
+        </div>
+      )
+    }
   }
 }
 
