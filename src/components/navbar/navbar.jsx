@@ -1,0 +1,22 @@
+import React, { Component } from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import './navbar.css';
+
+class NavbarMain extends React.Component {
+
+  render() {
+    return (
+      <Navbar className="nav-bar" bg="dark" variant="dark">
+        <Navbar.Brand href="/">
+
+        </Navbar.Brand>
+        <Navbar.Text className='Nav-title'>
+          Formation Binner
+        </Navbar.Text>
+
+      </Navbar>
+    )
+  }
+}
+
+export default NavbarMain;
