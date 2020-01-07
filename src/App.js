@@ -35,6 +35,7 @@ class App extends React.Component {
 
   render() {
     let secondary_selector
+
     if(this.state.binningMethod === "StageBins") {
       secondary_selector = <div><PbdbAges/></div>;
     } else if (this.state.binningMethod === "ScoreGrid1") {
@@ -42,36 +43,37 @@ class App extends React.Component {
     } else {
       secondary_selector = <div><ScoreGrid2/></div>;
     }
-      return (
-        <div className="App">
-          <div className="bin-method-wrapper">
-            <div className="bin-header">
-            Binning Methods
-            </div>
-            <ButtonToolbar aria-label="Toolbar with button groups">
-              <ButtonGroup className="mr-2" aria-label="First group">
-                <Button
-                id="stagebins"
-                onClick={this.stageBinsClick}>
-                Stage Bins
-                </Button>
-                <Button
-                id="scoregrid1"
-                onClick={this.scoreGrid1Click}>
-                Score Grid 1
-                </Button>
-                <Button
-                id="scoregrid2"
-                onClick={this.scoreGrid2Click}>
-                Score Grid 2
-                </Button>
-              </ButtonGroup>
-            </ButtonToolbar>
+    return (
+      <div className="App">
+        <div className="bin-method-wrapper">
+          <div className="bin-header">
+          Binning Methods
           </div>
-          {secondary_selector}
+          <ButtonToolbar aria-label="Toolbar with button groups">
+            <ButtonGroup className="mr-2" aria-label="First group">
+              <Button
+              id="stagebins"
+              onClick={this.stageBinsClick}>
+              Stage Bins
+              </Button>
+              <Button
+              id="scoregrid1"
+              onClick={this.scoreGrid1Click}>
+              Score Grid 1
+              </Button>
+              <Button
+              id="scoregrid2"
+              onClick={this.scoreGrid2Click}>
+              Score Grid 2
+              </Button>
+            </ButtonGroup>
+          </ButtonToolbar>
         </div>
-      )
-    }
-  };
+        <br></br>
+        {secondary_selector}
+      </div>
+    )
+  }
+}
 
 export default App;
