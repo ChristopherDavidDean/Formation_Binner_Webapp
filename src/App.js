@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div className="App">
+        <div className="bin-method-wrapper">
+          <div className="bin-header">
+          Binning Methods
+          </div>
+          <ButtonToolbar aria-label="Toolbar with button groups">
+            <ButtonGroup className="mr-2" aria-label="First group">
+              <Button>Stage Bins</Button>
+              <Button>Score Grid 1</Button>
+              <Button>Score Grid 2</Button>
+            </ButtonGroup>
+          </ButtonToolbar>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
