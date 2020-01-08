@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import GraphSg12Ma from './graphs/sg1_2ma.jsx';
 import './score_grid1.css';
 
 class ScoreGrid1 extends React.Component {
@@ -36,7 +37,7 @@ class ScoreGrid1 extends React.Component {
     let graph_choice
 
     if (this.state.sg1State === "2MA") {
-      graph_choice = "2MA AGES GRAPHS"
+      graph_choice = <GraphSg12Ma/>
     } else if (this.state.sg1State === "3MA") {
       graph_choice = "3MA AGES GRAPHS"
     } else if (this.state.sg1State === "4MA") {

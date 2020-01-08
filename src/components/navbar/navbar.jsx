@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import './navbar.css';
 
@@ -11,8 +11,7 @@ class NavbarMain extends React.Component {
         <img alt="logo"
         src= "uob_logo.jpeg"
         width="80"
-        height="80"
-        >
+        height="80">
         </img>
         </Navbar.Brand>
         <Navbar.Text className='Nav-title'>
