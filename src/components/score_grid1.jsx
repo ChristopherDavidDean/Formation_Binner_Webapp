@@ -49,9 +49,10 @@ class ScoreGrid1 extends React.Component {
       <div>
         <Row>
           <Col
-          sm={3}
+          sm={2}
           className="options-holder">
-            <div>
+            <div
+            className="Secondary-Header">
             Resolution
             </div>
             <ButtonGroup vertical>
