@@ -47,6 +47,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavbarMain/>
+        <div className="selector-container">
           <div className="bin-method-wrapper">
             <div className="bin-header">
             Binning Methods
@@ -73,6 +74,7 @@ class App extends React.Component {
           </div>
           <br></br>
           {secondary_selector}
+        </div>
       </div>
     )
   }

@@ -6,7 +6,11 @@ class NavbarMain extends React.Component {
 
   render() {
     return (
-      <Navbar className="nav-bar" bg="dark" variant="dark">
+      <Navbar
+      fixed="top"
+      className="nav-bar"
+      bg="dark"
+      variant="dark">
         <Navbar.Brand href="/">
         <img alt="logo"
         src= "uob_logo.jpeg"
