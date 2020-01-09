@@ -1,5 +1,4 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import './graphs.css';
@@ -12,6 +11,9 @@ class GraphSg12Ma extends React.Component {
         <Container
         className="graphs-container">
           <Col className="main-graph">
+          <h2 className="main-graph-header">
+          Primary Graph Name
+          </h2>
           <img
           alt="graph-one"
           className="graph-one"
@@ -19,6 +21,9 @@ class GraphSg12Ma extends React.Component {
           </img>
           </Col>
           <Col className="secondary-graph">
+          <h2 className="second-graph-header">
+          Secondary Graph Name
+          </h2>
           <img alt="graph-two"
           className="graph-two"
           src="M2_div_colls_SG1.jpeg">
