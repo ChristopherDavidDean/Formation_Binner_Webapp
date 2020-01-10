@@ -24,15 +24,24 @@ class Sg1Graphs extends React.Component {
     const primaryHeader4MA = <h2 className="main-graph-header"> 4MA Primary Graph Name</h2>
     const secondaryHeader4MA = <h2 className="second-graph-header"> 4MA Secondary Graph Name</h2>
 
+    const primaryGraph2MA = <img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img>
+    const secondaryGraph2MA = <img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img>
+
+    const primaryGraph3MA = <img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img>
+    const secondaryGraph3MA = <img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img>
+
+    const primaryGraph4MA = <img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img>
+    const secondaryGraph4MA = <img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img>
+
     if (this.props.sG1State === "2MA") {
-      main_graph = <div>{primaryHeader2MA}<img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
-      secondary_graph = <div>{secondaryHeader2MA}<img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
+      main_graph = <div>{primaryHeader2MA}{primaryGraph2MA}</div>
+      secondary_graph = <div>{secondaryHeader2MA}{secondaryGraph2MA}</div>
     } else if (this.props.sG1State === "3MA") {
-      main_graph = <div>{primaryHeader3MA}<img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
-      secondary_graph = <div>{secondaryHeader3MA}<img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
+      main_graph = <div>{primaryHeader3MA}{primaryGraph3MA}</div>
+      secondary_graph = <div>{secondaryHeader3MA}{secondaryGraph3MA}</div>
     } else if (this.props.sG1State === "4MA") {
-      main_graph = <div>{primaryHeader4MA}<img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
-      secondary_graph = <div>{secondaryHeader4MA}<img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
+      main_graph = <div>{primaryHeader4MA}{primaryGraph4MA}</div>
+      secondary_graph = <div>{secondaryHeader4MA}{secondaryGraph4MA}</div>
     }
     return (
       <div>
