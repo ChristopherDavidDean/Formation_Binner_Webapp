@@ -15,15 +15,24 @@ class Sg1Graphs extends React.Component {
     let main_graph
     let secondary_graph
 
+    const primaryHeader2MA = <h2 className="main-graph-header"> 2MA Primary Graph Name</h2>
+    const secondaryHeader2MA = <h2 className="second-graph-header"> 2MA Secondary Graph Name</h2>
+
+    const primaryHeader3MA = <h2 className="main-graph-header"> 3MA Primary Graph Name</h2>
+    const secondaryHeader3MA = <h2 className="second-graph-header"> 3MA Secondary Graph Name</h2>
+
+    const primaryHeader4MA = <h2 className="main-graph-header"> 4MA Primary Graph Name</h2>
+    const secondaryHeader4MA = <h2 className="second-graph-header"> 4MA Secondary Graph Name</h2>
+
     if (this.props.sG1State === "2MA") {
-      main_graph = <div><h2 className="main-graph-header">Primary Graph Name</h2><img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
-      secondary_graph = <div><h2 className="second-graph-header">Secondary Graph Name</h2><img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
+      main_graph = <div>{primaryHeader2MA}<img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
+      secondary_graph = <div>{secondaryHeader2MA}<img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
     } else if (this.props.sG1State === "3MA") {
-      main_graph = <div><h2 className="main-graph-header">Primary Graph Name</h2><img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
-      secondary_graph = <div><h2 className="second-graph-header">Secondary Graph Name</h2><img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
+      main_graph = <div>{primaryHeader3MA}<img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
+      secondary_graph = <div>{secondaryHeader3MA}<img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
     } else if (this.props.sG1State === "4MA") {
-      main_graph = <div><h2 className="main-graph-header">Primary Graph Name</h2><img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
-      secondary_graph = <div><h2 className="second-graph-header">Secondary Graph Name</h2><img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
+      main_graph = <div>{primaryHeader4MA}<img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img></div>
+      secondary_graph = <div>{secondaryHeader4MA}<img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img></div>
     }
     return (
       <div>
