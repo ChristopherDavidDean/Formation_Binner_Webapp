@@ -3,14 +3,14 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import GraphSg12Ma from './graphs/sg1_2ma.jsx';
+import Sg1Graphs from './graphs/sg1_graphs.jsx';
 import './score_grid1.css';
 
 class ScoreGrid1 extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      sg1State: ''
+      sG1State: ''
     }
     this.twoMAClick = this.twoMAClick.bind(this)
     this.threeMAClick = this.threeMAClick.bind(this)
@@ -19,32 +19,23 @@ class ScoreGrid1 extends React.Component {
 
   twoMAClick = () => {
     this.setState({
-      sg1State: "2MA"
+      sG1State: "2MA"
     })
   }
 
   threeMAClick = () => {
     this.setState({
-      sg1State: "3MA"
+      sG1State: "3MA"
     })
   }
 
   fourMAClick = () => {
     this.setState({
-      sg1State: "4MA"
+      sG1State: "4MA"
     })
   }
 
   render() {
-    let graph_choice
-
-    if (this.state.sg1State === "2MA") {
-      graph_choice = <GraphSg12Ma/>
-    } else if (this.state.sg1State === "3MA") {
-      graph_choice = "3MA AGES GRAPHS"
-    } else if (this.state.sg1State === "4MA") {
-      graph_choice = "4MA AGES GRAPHS"
-    }
     return (
       <div>
         <Row>
@@ -78,7 +69,8 @@ class ScoreGrid1 extends React.Component {
           <Col className="graph-holder">
             <div
             className="graphs">
-            {graph_choice}
+            <Sg1Graphs
+            sG1State={this.state.sG1State}/>
             </div>
           </Col>
         </Row>
