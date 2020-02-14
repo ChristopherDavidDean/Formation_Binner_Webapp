@@ -11,7 +11,8 @@ class ScoreGrid1 extends React.Component {
     super(props)
     this.state = {
       sG1Resolution: '',
-      sG1Method: ''
+      sG1Method: '',
+      sG1MethodShort: ''
     }
     this.twoMAClick = this.twoMAClick.bind(this)
     this.threeMAClick = this.threeMAClick.bind(this)
@@ -41,19 +42,22 @@ class ScoreGrid1 extends React.Component {
 
   methodOneClick = () => {
     this.setState({
-      sG1Method: "Method 1"
+      sG1Method: "Method 1",
+      sG1MethodShort: "Meth1"
     })
   }
 
   methodTwoClick = () => {
     this.setState({
-      sG1Method: "Method 2"
+      sG1Method: "Method 2",
+      sG1MethodShort: "Meth1"
     })
   }
 
   methodThreeClick = () => {
     this.setState({
-      sG1Method: "Method 3"
+      sG1Method: "Method 3",
+      sG1MethodShort: "Meth1"
     })
   }
 
@@ -114,7 +118,8 @@ class ScoreGrid1 extends React.Component {
             className="graphs">
             <Sg1Graphs
             sG1Resolution={this.state.sG1Resolution}
-            sG1Method={this.state.sG1Method}/>
+            sG1Method={this.state.sG1Method}
+            sG1MethodShort={this.state.sG1MethodShort}/>
             </div>
           </Col>
         </Row>
