@@ -10,28 +10,50 @@ class ScoreGrid1 extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      sG1State: ''
+      sG1Resolution: '',
+      sG1Method: ''
     }
     this.twoMAClick = this.twoMAClick.bind(this)
     this.threeMAClick = this.threeMAClick.bind(this)
     this.fourMAClick = this.fourMAClick.bind(this)
+    this.methodOneClick = this.methodOneClick.bind(this)
+    this.methodTwoClick = this.methodTwoClick.bind(this)
+    this.methodThreeClick = this.methodThreeClick.bind(this)
   }
 
   twoMAClick = () => {
     this.setState({
-      sG1State: "2MA"
+      sG1Resolution: "2MA"
     })
   }
 
   threeMAClick = () => {
     this.setState({
-      sG1State: "3MA"
+      sG1Resolution: "3MA"
     })
   }
 
   fourMAClick = () => {
     this.setState({
-      sG1State: "4MA"
+      sG1Resolution: "4MA"
+    })
+  }
+
+  methodOneClick = () => {
+    this.setState({
+      sG1Method: "Method 1"
+    })
+  }
+
+  methodTwoClick = () => {
+    this.setState({
+      sG1Method: "Method 2"
+    })
+  }
+
+  methodThreeClick = () => {
+    this.setState({
+      sG1Method: "Method 3"
     })
   }
 
@@ -43,7 +65,7 @@ class ScoreGrid1 extends React.Component {
           sm={2}
           className="options-holder">
             <div
-            className="Secondary-Header">
+            className="Resolution-Header">
             Resolution
             </div>
             <ButtonGroup vertical>
@@ -64,13 +86,35 @@ class ScoreGrid1 extends React.Component {
               >
               4 Ma
               </Button>
+              <div
+              className="Method-Header">
+              Method
+              </div>
+              <Button
+              id="sg1_m1"
+              onClick={this.methodOneClick}>
+              Method 1
+              </Button>
+              <Button
+              id="sg1_m2"
+              onClick={this.methodTwoClick}
+              >
+              Method 2
+              </Button>
+              <Button
+              id="sg1_m3"
+              onClick={this.methodThreeClick}
+              >
+              Method 3
+              </Button>
             </ButtonGroup>
           </Col>
           <Col className="graph-holder">
             <div
             className="graphs">
             <Sg1Graphs
-            sG1State={this.state.sG1State}/>
+            sG1Resolution={this.state.sG1Resolution}
+            sG1Method={this.state.sG1Method}/>
             </div>
           </Col>
         </Row>

@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import './graphs.css';
 
-class Sg1Graphs extends React.Component {
+class Sg2Graphs extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -33,13 +33,13 @@ class Sg1Graphs extends React.Component {
     const primaryGraph4MAMethod1 = <img alt="graph-one" className="graph-one" src="M2_SQS_SG1.jpeg"></img>
     const secondaryGraph4MAMethod1 = <img alt="graph-two" className="graph-two" src="M2_div_colls_SG1.jpeg"></img>
 
-    if (this.props.sG1Resolution === "2MA" && this.props.sG1Method === "Method 1") {
+    if (this.props.sG2Resolution === "2MA" && this.props.sG2Method === "Method 1") {
       main_graph = <div>{primaryHeader2MAMethod1}{primaryGraph2MAMethod1}</div>
       secondary_graph = <div>{secondaryHeader2MAMethod1}{secondaryGraph2MAMethod1}</div>
-    } else if (this.props.sG1Resolution === "3MA" && this.props.sG1Method === "Method 1") {
+    } else if (this.props.sG2Resolution === "3MA" && this.props.sG2Method === "Method 1") {
       main_graph = <div>{primaryHeader3MAMethod1}{primaryGraph3MAMethod1}</div>
       secondary_graph = <div>{secondaryHeader3MAMethod1}{secondaryGraph3MAMethod1}</div>
-    } else if (this.props.sG1Resolution === "4MA" && this.props.sG1Method === "Method 1") {
+    } else if (this.props.sG2Resolution === "4MA" && this.props.sG2Method === "Method 1") {
       main_graph = <div>{primaryHeader4MAMethod1}{primaryGraph4MAMethod1}</div>
       secondary_graph = <div>{secondaryHeader4MAMethod1}{secondaryGraph4MAMethod1}</div>
     }
@@ -59,4 +59,4 @@ class Sg1Graphs extends React.Component {
   }
 }
 
-export default Sg1Graphs;
+export default Sg2Graphs;

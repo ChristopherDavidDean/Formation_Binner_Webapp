@@ -12,8 +12,14 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      binningMethod: "StageBins",
+      binningMethod: "SubStageBins",
     }
+  }
+
+  subStageBinsClick = () => {
+    this.setState({
+      binningMethod: "SubStageBins"
+    })
   }
 
   stageBinsClick = () => {
@@ -37,8 +43,8 @@ class App extends React.Component {
   render() {
     let secondary_selector
 
-    if(this.state.binningMethod === "StageBins") {
-      secondary_selector = <div><PbdbAges/></div>;
+    if(this.state.binningMethod === "StageBins" || this.state.binningMethod === "SubStageBins") {
+      secondary_selector = <div><PbdbAges binMethod={this.state.binningMethod} /></div>;
     } else if (this.state.binningMethod === "ScoreGrid1") {
       secondary_selector = <div><ScoreGrid1/></div>;
     } else {
@@ -54,6 +60,11 @@ class App extends React.Component {
             </div>
             <ButtonToolbar aria-label="Toolbar with button groups">
               <ButtonGroup className="mr-2" aria-label="First group">
+                <Button
+                id="substagebins"
+                onClick={this.subStageBinsClick}>
+                Sub-Stage Bins
+                </Button>
                 <Button
                 id="stagebins"
                 onClick={this.stageBinsClick}>

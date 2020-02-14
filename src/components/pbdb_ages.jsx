@@ -30,7 +30,11 @@ class PbdbAges extends React.Component {
   render() {
     let graph_choice
 
-    if (this.state.pbdbState === "PBDB Ages") {
+    if (this.state.pbdbState === "PBDB Ages" && this.props.binMethod === "SubStageBins") {
+      graph_choice = " SubStage PBDB AGES GRAPHS"
+    } else if (this.state.pbdbState === "Updated Ages" && this.props.binMethod === "SubStageBins") {
+      graph_choice = "SubStage UPDATED AGES GRAPHS"
+    } else if (this.state.pbdbState === "PBDB Ages") {
       graph_choice = "PBDB AGES GRAPHS"
     } else if (this.state.pbdbState === "Updated Ages") {
       graph_choice = "UPDATED AGES GRAPHS"
